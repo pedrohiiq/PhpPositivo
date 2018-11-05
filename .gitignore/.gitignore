@@ -1,0 +1,7 @@
+# Vim gitignore files
+
+# Undo files
+*.un~
+*~
+# Swap files shouldn't even be here! but anyways
+*.swp
