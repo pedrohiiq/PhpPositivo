@@ -1,0 +1,15 @@
+/*style shiet*/
+
+.text-orange{color:#a04100!important}
+.text-orange-light{color:#e36209!important}
+
+p {
+	font-family: Verdana;
+	font-size: 14px;
+	color: #777;
+}
+
+h1, h2 {
+	font-family: Arial;
+	color: #06c;
+}
