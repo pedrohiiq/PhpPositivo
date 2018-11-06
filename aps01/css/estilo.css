@@ -1,0 +1,29 @@
+body{
+	font-family: Verdana;
+	font-size: 14px;
+	color: #444;
+}
+
+label{
+	font-weight: bold;
+}
+
+.campo { /* classe campo */
+	border: solid 1px #777; /*borda sólida, 1px de espessura, cor cinza */
+	border-radius: 7px; /* cantos arredonados em 7px */
+	padding: 5px; /* margem interna 5px */
+}
+
+.botao {
+	font-weight: bold; /* negrito */
+	padding: 10px; /* margem interna */
+	border-radius: 7px; /* cantos arredondados */
+	border: none; /* sem borda */
+}
+/*
+.campo {
+	border: solid 1px #555;
+	border-radius: 10px;
+	padding: 5px;
+}
+*/
