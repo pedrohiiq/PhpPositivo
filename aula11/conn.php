@@ -3,7 +3,7 @@
 define('SERVERNAME', 'localhost');
 define('USERNAME', 'root');
 define('PASSWORD', '');
-define('DBNAME', 'bd_evento');
+define('DBNAME', 'bd_site');
 
 $conn = mysqli_connect(SERVERNAME, USERNAME, PASSWORD, DBNAME);
 

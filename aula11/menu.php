@@ -1,3 +1,4 @@
+
 <?php 
 	if(session_status() == PHP_SESSION_NONE) {
 		session_start();
@@ -6,15 +7,15 @@
 <br><br>
 <ul class="nav">
 	<li class="nav-item">
-		<a href="index.php" class="btn btn-outline-success">Home</a>
+		<a href="index.php" class="btn btn-outline-warning">Home</a>
 	</li>
 	&nbsp
 	<li class="nav-item">
-		<a href="login.php" class="btn btn-outline-warning">Login</a>
+		<a href="login.php" class="btn btn-outline-success">Login</a>
 	</li>
 	&nbsp <!-- espaco entre botoes -->
 	<li class="nav-item">
-		<a href="cadastrar.php" class="btn btn-outline-success">Cadastrar</a>
+		<a href="form_cadastro.php" class="btn btn-outline-primary">Cadastrar</a>
 	</li>
 </ul>
 <br>

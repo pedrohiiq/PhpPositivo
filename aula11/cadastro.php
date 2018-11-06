@@ -7,14 +7,15 @@
 		$email = $_POST['email'];
 		include 'conn.php';
 
-		$sql = "select usuario, senha from tb_usuarios where (usuario like '$usuario' or email like '$usuario') and senha = like '$senha'";
+		$sql = "insert into tb_usuarios (usuario, senha, email)
+		values ('$usuario', '$senha', '$email')";
 
-		$resultado = mysqli_query($conn)
+		$resultado = mysqli_query($conn, $sql);
 
 		if ($resultado) {
-			header("location:login.php?msg=cadSuccess")
+			header("location:login.php?msg=cadSuccess");
 		} else {
-			header("location:login.php?msg=cadError")
+			header("location:login.php?msg=cadError");
 		}
 	}
 ?>
