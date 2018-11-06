@@ -1,13 +1,11 @@
 # Vim gitignore files
 
 # Undo files
-*.un~
-*~
+**/*.un~
+**/*~
 # Swap files shouldn't even be here! but anyways
-*.swp
+**/*.swp
 
 # pdfs
-*.pdf
-# pdfs em /lista\ 01; linha acima nao funfou :/
-/lista01/*.pdf
-lista01/*.pdf
+**/*.pdf
+
