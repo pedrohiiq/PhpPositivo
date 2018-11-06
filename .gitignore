@@ -8,4 +8,5 @@
 
 # pdfs
 **/*.pdf
-
+# acabou que usando o .git/info/exclude resolveu o problema.
+# Ainda vou dar um jeito de resolver com .gigitignore.
