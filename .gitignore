@@ -8,3 +8,5 @@
 
 # pdfs
 *.pdf
+# pdfs em /lista\ 01; linha acima nao funfou :/
+/lista\ 01/*.pdf
