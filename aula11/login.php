@@ -8,7 +8,7 @@
 <body class="container">
 	<?php
 
-	function echo_msg( $getMsg ){   
+	function echo_msg( $getMsg ){
 		echo '<br><br>';
 		if ($getMsg == 'emptyFields') {
 			echo '<div class="alert alert-warning" role="alert">';

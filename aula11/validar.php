@@ -13,7 +13,7 @@ else
 
 	include 'conn.php';
 
-	$sql = "select usuario, senha from tb_usuarios where (usuario like '$usuario' or email like '$usuario') and senha like '$senha'";
+	$sql = "select id, usuario, email, senha from tb_usuarios where (usuario = '$usuario' or email = '$usuario') and senha = '$senha'";
 
 	$resultado = mysqli_query($conn, $sql);
 
@@ -22,16 +22,20 @@ else
 		$login = mysqli_fetch_assoc($resultado);
 
 		session_start();
+		$_SESSION['id'] = $login['id'];
 		$_SESSION['usuario'] = $login['usuario'];
-		$_SESSION['senha'] = $senha['senha'];
+		$_SESSION['email'] = $login['email'];
+		$_SESSION['senha'] = $login['senha'];
 
-		header('location:perfil.php');
+		header('location:perfil.php?msg=loginSuc');
 
 	} elseif (mysqli_affected_rows($conn) == 0) {
-		header('location:login.php?msg=dadosInvalidos');
-	} elseif (mysqli_affected_rows($conn) == -1) {echo "<h1>affected rows retornou -1 (erro no sql)</h1>";
+	} elseif (mysqli_affected_rows($conn) == -1) {
+		header('location:login.php?msg=sqlErr');
+		exit();
 	} else {
 		header('location:login.php?msg=loginError');
+		exit();
 	}
 }
 ?>
