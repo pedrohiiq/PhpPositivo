@@ -1,7 +1,6 @@
 
 <?php 
 	if(session_status() == PHP_SESSION_NONE) {
-		session_start();
 		?>
 
 <br><br>
@@ -21,7 +20,8 @@
 <br>
 
 		<?php
-	} elseif (empty($_SESSION['usuario']) || empty($_SESSION['senha'])) {
+		session_start();
+	} elseif ( !empty($_SESSION['usuario']) && !empty($_SESSION['senha'])) {
 		?>
 
 <br><br>
