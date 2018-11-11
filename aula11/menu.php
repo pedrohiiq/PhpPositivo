@@ -9,15 +9,15 @@
 <br><br>
 <ul class="nav">
 	<li class="nav-item">
-		<a href="index.php" class="btn btn-outline-warning">Home</a>
+		<a href="index.php" class="btn btn-warning">Home</a>
 	</li>
 	&nbsp
 	<li class="nav-item">
-		<a href="login.php" class="btn btn-outline-success">Login</a>
+		<a href="login.php" class="btn btn-success">Login</a>
 	</li>
 	&nbsp <!-- espaco entre botoes -->
 	<li class="nav-item">
-		<a href="form_cadastro.php" class="btn btn-outline-primary">Cadastrar</a>
+		<a href="form_cadastro.php" class="btn btn-primary">Cadastrar</a>
 	</li>
 </ul>
 <br>
@@ -29,19 +29,18 @@
 <br><br>
 <ul class="nav">
 	<li class="nav-item">
-		<a href="index.php" class="btn btn-outline-success">Home</a>
+		<a href="index.php" class="btn btn-success">Home</a>
 	</li>
 	&nbsp
 	<li class="nav-item">
-		<a href="perfil.php" class="btn btn-outline-warning">Meu Perfil</a>
+		<a href="perfil.php" class="btn btn-warning">Meu Perfil</a>
 	</li>
 	&nbsp <!-- espaco entre botoes -->
 	<li class="nav-item">
-		<a href="logout.php" class="btn btn-outline-danger">Logout</a>
+		<a href="logout.php" class="btn btn-danger">Logout</a>
 	</li>
 </ul>
 <br>
-
 		<?php
 	}
 ?>

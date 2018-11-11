@@ -1,6 +1,6 @@
 <?php 
 	if (empty($_POST['usuario']) || empty($_POST['senha']) || empty($_POST['email'])) {
-		header('location:cadastrar.php?msg=emptyFields');
+		header('location:form_cadastro.php?msg=emptyFields');
 	} else {
 		$usuario = $_POST['usuario'];
 		$senha = $_POST['senha'];

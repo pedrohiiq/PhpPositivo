@@ -28,13 +28,11 @@ else
 		$_SESSION['senha'] = $login['senha'];
 
 		header('location:perfil.php?msg=loginSuc');
-
-	} elseif (mysqli_affected_rows($conn) == 0) {
 	} elseif (mysqli_affected_rows($conn) == -1) {
 		header('location:login.php?msg=sqlErr');
 		exit();
 	} else {
-		header('location:login.php?msg=loginError');
+		header('location:login.php?msg=loginErr');
 		exit();
 	}
 }

@@ -7,9 +7,27 @@
 	<!--<link rel="stylesheet" type="text/css" href="css/style.css">-->
 	<title>Aula 11 - Perfil</title>
 </head>
-<?php include "menu.php" ?>
+
 
 <body class="container">
+	<?php
+	function dealWithGetMsg() {
+		if (!empty($_GET['msg'])) {
+			$msg = $_GET['msg'];
+			echo '<br><br>';
+		}
+		if (isset($msg)) {
+			if ($msg == 'emptyFields') {
+				echo '<div class="alert alert-warning" role="alert">';
+				echo '<h4 class="alert-heading">ATENÇÃO:</h4><hr>';
+				echo '<p>Cadastro nao realizado!</p>';
+				echo '<p>Preencha todos os campos do formulário</p></div>';
+			}
+		}
+	}
+	dealWithGetMsg();
+	?>
+	<?php include "menu.php" ?>	
 	<form name="login" action="cadastro.php" method="post">
 	<p>
 		<label>Nome de usuário:</label><br>

@@ -22,6 +22,6 @@
 	dealWithGetMsg();
 	?>	
 	<?php include 'menu.php'; ?>
-	<h2>Página Inicial</h2>
+	<h2 class="text-info">Página Inicial</h2>
 </body>
 </html>
