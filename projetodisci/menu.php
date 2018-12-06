@@ -8,7 +8,7 @@
 		<a href="f_login.php" class="btn btn-primary">Login</a>';
 	} else {
 		$menuitems = '<a href="index.php" class="btn btn-primary">Home</a>
-		<a href="agenda.php" class="btn btn-primary">Minha Agenda</a>
+		<a href="meus_noodles.php" class="btn btn-primary">Meus noodles</a>
 		<a href="logout.php" class="btn btn-primary">Sair</a>';
 	}
 ?>
