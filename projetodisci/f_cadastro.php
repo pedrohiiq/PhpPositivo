@@ -14,24 +14,24 @@
 	<form name="cadastro" action="v_cadastro.php" method="post">
 		<h2 class="text-info">Cadastro de empresas.</h2>	
 		<p>
-			<label>Usuario</label><br>
-			<input type="text" name="usuario" placeholder="joaojoao" size="20" required>
-		</p>
-		<p>
-			<label>E-mail:</label><br>
-			<input type="email" name="email" placeholder="jo@o" size="20" required>
+			<label>Nome fantasia</label><br>
+			<input type="text" name="nomefantasia" placeholder="Nissin" size="20" required>
 		</p>
 		<p>
 			<label>Razao social:</label><br>
-			<input type="email" name="email" placeholder="jo@o" size="20" required>
+			<input type="text" name="razaosocial" placeholder="Nissin-ajinomoto Alimentos Ltda" size="20" required>
 		</p>
 		<p>
-			<label>Nome fantasia:</label><br>
-			<input type="email" name="email" placeholder="jo@o" size="20" required>
+			<label>CNPJ:</label><br>
+			<input type="number" name="cnpj" size="20" required>
+		</p>
+		<p>
+			<label>E-mail:</label><br>
+			<input type="email" name="email" placeholder="nissin@nissin.nissin" size="20" required>
 		</p>
 		<p>
 			<label>Senha</label><br>
-			<input type="password" name="senha" placeholder="j04o" size="20" required>
+			<input type="password" name="senha" size="20" required>
 		</p>
 		<p>
 			<button name="btn_cadastrar" class="btn btn-outline-primary" type="submit">Cadastrar</button>

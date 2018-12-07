@@ -1,14 +1,16 @@
 <?php 
 	include 'funcoes.php'; validar_form_cad();
 
-	$usuario = $_POST['usuario'];
+	$nomefantasia = $_POST['nomefantasia'];
+	$razaosocial = $_POST['razaosocial'];
+	$cnpj = $_POST['cnpj'];
 	$email = $_POST['email'];
 	$senha = password_hash($_POST['senha'], PASSWORD_BCRYPT);
 
 	include 'conn.php';
 
-	$sql = "INSERT INTO tb_usuario (usuario, senha, email)
-	VALUES ('$usuario', '$senha', '$email')";
+	$sql = "INSERT INTO tb_fabricante (nome_fantasia, razao_social, cnpj, email, senha)
+	VALUES ('$nomefantasia', '$razaosocial', '$cnpj', '$email', '$senha')";
 
 	$resultado = mysqli_query($conn, $sql);
 

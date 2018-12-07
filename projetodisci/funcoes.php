@@ -1,21 +1,21 @@
 <?php 
 function validar_form_cad() {
-	if (!strlen($_POST['usuario']) || !strlen($_POST['senha']) || !strlen($_POST['email'])) {
+	if (!strlen($_POST['nomefantasia']) || !strlen($_POST['razaosocial']) || !strlen($_POST['cnpj']) || !strlen($_POST['email']) || !strlen($_POST['senha'])) {
 		header('location:f_cadastro.php?msg=emptyFields');
 		exit;
 	}
 }
 function validar_form_login() {
-	if (empty($_POST['usuario']) || empty($_POST['senha'])) {
+	if (empty($_POST['email']) || empty($_POST['senha'])) {
 		header('location:f_login.php?msg=emptyFields');
 		exit;
 	}	
 }
-function validar_form_evento() {
+function validar_cad_noodle() {
 	/*tambem funciona para o v_ed_evento.php, pois sao exatamente
 	os mesmos dados que estao sendo passados*/
-	if ( empty($_POST['evento']) || empty($_POST['prioridade']) || empty($_POST['data']) ) {
-		header('location:agenda.php?msg=emptyFields');
+	if ( empty($_POST['marca']) || empty($_POST['sabor']) || empty($_POST['preco']) ) {
+		header('location:meus_noodles.php?msg=emptyFields');
 		exit;
 	}
 }
@@ -55,5 +55,13 @@ function verificar_msg() {
 		<h5>Houve um erro.</h5></div>';
 		} 
 	}
+}
+
+function dados_fabricante( /*array com colunas que se quer*/ $arr ) {
+	//isso requer que session e conn estejam ativas!!
+	$campos = implode(', ', $arr);
+	$sql = "SELECT $campos FROM tb_fabricante WHERE id = " . $_SESSION['id'];
+	$dados = mysqli_fetch_assoc( mysqli_query($conn, $sql) );
+	return $dados;
 }
 ?>
