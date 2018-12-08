@@ -4,7 +4,7 @@ $email = $_POST['email'];
 
 include 'conn.php';
 
-$sql = "SELECT id, email, senha FROM tb_fabricante
+$sql = "SELECT id, email, senha, permissoes FROM tb_fabricante
 WHERE (email = '$email')";
 
 $resultado = mysqli_query($conn, $sql);
@@ -12,11 +12,11 @@ $resultado = mysqli_query($conn, $sql);
 if (mysqli_affected_rows($conn) > 0) {
 	$login = mysqli_fetch_assoc($resultado);
 	if (password_verify($_POST['senha'], $login['senha'])) {
-
 		session_start();
 		$_SESSION['id'] = $login['id'];
 		$_SESSION['email'] = $login['email'];
 		$_SESSION['senha'] = $login['senha'];
+		$_SESSION['permissoes'] = $login['permissoes'];
 		header('location:index.php?msg=loginSuc');
 		exit;
 	} else {

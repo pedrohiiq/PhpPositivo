@@ -1,4 +1,3 @@
-/*
 .content:before {
   content: "";
   position: fixed;
@@ -26,7 +25,19 @@
   margin-left: 20px;
   margin-right: 20px;
 }
-*/
+
+.copy {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif; 
+}
 
 button, li, a{
     margin-right: 15px;
@@ -34,6 +45,7 @@ button, li, a{
 }
 
 .mainpagediv {
+    text-shadow: 1px 1px #000000;
     margin-top: 40px;
     margin-left: 20px;
 }
@@ -42,14 +54,18 @@ label {
     font-weight: bold;
 }
 
-table {
-    margin-top: 20px;
+table{
+    font-size: 110%;
     text-align: center;
+}
+
+.tabletitle {
+  margin-top: 20px;
 }
 
 .divnavbar {
 	/* margin: top right bottom left; */
-	margin-top: 100px;
+	margin-top: 60px;
     margin-bottom: 10px;
 }
 

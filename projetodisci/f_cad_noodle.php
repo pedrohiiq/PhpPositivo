@@ -12,9 +12,6 @@
 		<input type="number" name="preco" step="0.01" required>
 	</p>
 	<p>
-		<input type="file" name="fotomiojo" accept="image/png, image/jpeg">
-	</p>	
-	<p>
 		<button type="button" class="btn btn-outline-primary" data-dismiss="modal">Fechar</button>
 		<button class="btn btn-outline-danger" type="submit">Salvar</button>
 	</p>

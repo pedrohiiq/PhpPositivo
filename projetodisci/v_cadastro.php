@@ -9,8 +9,8 @@
 
 	include 'conn.php';
 
-	$sql = "INSERT INTO tb_fabricante (nome_fantasia, razao_social, cnpj, email, senha)
-	VALUES ('$nomefantasia', '$razaosocial', '$cnpj', '$email', '$senha')";
+	$sql = "INSERT INTO tb_fabricante (nome_fantasia, razao_social, cnpj, email, senha, permissoes)
+	VALUES ('$nomefantasia', '$razaosocial', '$cnpj', '$email', '$senha', 1)";
 
 	$resultado = mysqli_query($conn, $sql);
 

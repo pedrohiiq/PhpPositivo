@@ -5,21 +5,26 @@ if (empty($_POST['id'])) {
 	exit;
 	//isso somente ocorrera caso o usuario altere o formulario.
 }
-$id_usuario = $_SESSION['id'];
-$id_evento = $_POST['id'];
+$id_fabricante = $_SESSION['id'];
+$id_noodle = $_POST['id'];
 
-$sql = "DELETE FROM tb_evento
-WHERE id_evento = $id_evento AND id_usuario = $id_usuario";
+if ($_SESSION['permissoes'] == 5) {
+	$sql = "DELETE FROM tb_noodles
+	WHERE id = $id_noodle";
+} else {
+	$sql = "DELETE FROM tb_noodles
+	WHERE id = $id_noodle AND id_fabricante = $id_fabricante";
+}
 $resultado = mysqli_query($conn, $sql);
 
 if (mysqli_affected_rows($conn) == 1) {
-	header('location:agenda.php?msg=eventoDelSuc');
+	header('location:meus_noodles.php?msg=noodleDelSuc');
 	exit;
 } elseif (mysqli_affected_rows($conn) == 0) {
-	header('location:agenda.php');
+	header('location:meus_noodles.php');
 	exit;
 } elseif (mysqli_affected_rows($conn) == -1) {
-	header('location:agenda.php');
+	header('location:meus_noodles.php');
 	//echo mysqli_error($conn);
 	//como sempre, se isso ocorrer, sera erro do programador.
 }
